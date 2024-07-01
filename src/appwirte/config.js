@@ -108,10 +108,22 @@ export class Serive {
 
     async deleteFile(fileId) {
         try {
+            return await this.bucket.deleteFile(
+                conf.appwriteBucketId,
+                fileId
+            )
+            return true
         } catch (error) {
             console.log("AppWrite serive :: updatePost :: error", error);
             return false
         }
+    }
+
+    getFilePreview(fileId) {
+        return this.bucket.getFilePreview(
+            conf.appwriteBucketId,
+            fileId
+        )
     }
 }
 
