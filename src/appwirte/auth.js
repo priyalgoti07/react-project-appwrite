@@ -1,4 +1,4 @@
-import { Account, ID } from 'appwrite';
+import { Account, Client, ID } from 'appwrite';
 import cong from '../conf/conf'
 
 export class AuthService {
@@ -6,8 +6,7 @@ export class AuthService {
     account;
 
     constructor() {
-        this.client()
-            .setEndpoint(cong.appwritwUrl)
+        this.client.setEndpoint(cong.appwritwUrl)
             .setProject(cong.appwriteProjectId)
         this.account = new Account(this.client)
     }
@@ -40,7 +39,7 @@ export class AuthService {
             return await this.account.get()
         }
         catch (error) {
-            console.log("AppWirte serive :: getCurrentUser :: error", errorsss);
+            console.log("AppWirte serive :: getCurrentUser :: error", error);
         }
         return null;
     }
