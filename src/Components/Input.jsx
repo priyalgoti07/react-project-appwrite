@@ -1,6 +1,6 @@
 import React, { useId } from 'react'
 
-const Input = React.forwardRef(Input = ({
+const Input = React.forwardRef(({
     label,
     type = "text",
     className = '',

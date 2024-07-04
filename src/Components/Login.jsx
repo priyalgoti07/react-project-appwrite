@@ -45,22 +45,23 @@ const Login = () => {
                         label="Email: "
                         placeHolder="Enter your email"
                         type="email"
-                        {...register, "email", {
+                        {...register("email", {
                             required: true,
                             validate: {
                                 matchPatten: (value) => /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/.test(value) ||
                                     "Email address must be a valid address"
 
                             }
-                        }}
+                        })
+                        }
                     ></Input>
                     <Input
                         label="Password :"
                         type="password"
                         placeHolder="Enter your password"
-                        {...register, "passwor", {
+                        {...register("password", {
                             required: true,
-                        }}
+                        })}
                     >
                     </Input>
                     <Button type='submit' className='w-full'>Sign in</Button>

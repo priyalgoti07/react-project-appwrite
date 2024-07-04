@@ -1,15 +1,15 @@
 import conf from '../conf/conf'
 import { Client, ID, Databases, Storage, Query, Account } from 'appwrite'
 
-export class Serive {
+export class Serivce {
     client = new Client();
     databases;
     bucket;
 
     constructor() {
-        this.client()
-            .setEndpoint(cong.appwritwUrl)
-            .setProject(cong.appwriteProjectId)
+        this.client
+            .setEndpoint(conf.appwritwUrl)
+            .setProject(conf.appwriteProjectId)
         this.account = new Account(this.client)
         this.databases = new Databases(this.client);
         this.bucket = new Storage(this.client);
@@ -127,5 +127,5 @@ export class Serive {
     }
 }
 
-const serive = new Serive()
-export default serive
+const serivece = new Serivce()
+export default serivece
