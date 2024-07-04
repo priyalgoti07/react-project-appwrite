@@ -12,4 +12,9 @@ import Login from './Login';
 import PostForm from "./PostForm/PostForm";
 import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
-export { Header, Footer, Container, Logo, LogoutBtn, Button, Select, Input, RTE, Signup, Login, PostForm, PostCard,AuthLayout } 
+import Home from "../Pages/Home";
+import AddPost from "../Pages/AddPost";
+import AllPost from "../Pages/AllPost";
+import Edit from "../Pages/Edit";
+import Post from "../Pages/Post";
+export { Header, Footer, Container, Logo, LogoutBtn, Button, Select, Input, RTE, Signup, Login, PostForm, PostCard, AuthLayout, Home, AddPost, AllPost, Edit, Post } 

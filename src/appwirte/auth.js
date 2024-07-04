@@ -6,9 +6,11 @@ export class AuthService {
     account;
 
     constructor() {
-        this.client.setEndpoint(cong.appwritwUrl)
+        this.client
+            .setEndpoint(cong.appwritwUrl)
             .setProject(cong.appwriteProjectId)
         this.account = new Account(this.client)
+        console.log("account", this.account);
     }
 
     async createAccount({ email, password, name }) {

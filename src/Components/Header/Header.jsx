@@ -5,7 +5,7 @@ import { Container, Logo, LogoutBtn } from '../index'
 
 const Header = () => {
   const authStatus = useSelector((state) => state.auth.status)
-
+  console.log("authStatus",authStatus);
   const navigate = useNavigate()
 
   const navItem = [
@@ -35,7 +35,7 @@ const Header = () => {
       active: !authStatus
     },
     {
-      name: Login,
+      name: "Login",
       slug: "/login",
       active: !authStatus
     },
