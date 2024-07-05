@@ -5,7 +5,7 @@ import { Container, Logo, LogoutBtn } from '../index'
 
 const Header = () => {
   const authStatus = useSelector((state) => state.auth.status)
-  console.log("authStatus",authStatus);
+  console.log("authStatus", authStatus);
   const navigate = useNavigate()
 
   const navItem = [
@@ -34,11 +34,6 @@ const Header = () => {
       slug: "/add-post",
       active: !authStatus
     },
-    {
-      name: "Login",
-      slug: "/login",
-      active: !authStatus
-    },
   ]
   return (
     <header className='py-3 shadow bg-gray-500'>
@@ -58,7 +53,7 @@ const Header = () => {
                 </li> : null
             )}
           </ul>
-          {authStatus && (
+          {!authStatus && (
             <li>
               <LogoutBtn />
             </li>

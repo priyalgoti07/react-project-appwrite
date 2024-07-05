@@ -4,8 +4,9 @@ import cong from '../conf/conf'
 export class AuthService {
     client = new Client();
     account;
-
+    
     constructor() {
+        console.log("client",this.client)
         this.client
             .setEndpoint(cong.appwritwUrl)
             .setProject(cong.appwriteProjectId)

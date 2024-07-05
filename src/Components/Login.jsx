@@ -6,6 +6,7 @@ import authService from '../appwirte/auth'
 import { useForm } from 'react-hook-form'
 import { login as authlogin } from '../Store/authSlice'
 const Login = () => {
+    console.log("i am login----------->");
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const { register, handleSubmit } = useForm()
