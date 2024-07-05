@@ -74,13 +74,13 @@ const PostForm = ({ post }) => {
             <div className="w-2/3 px-2">
                 <Input
                     label="Title :"
-                    placeholder="Title"
+                    placeHolder="Title"
                     className="mb-4"
                     {...register("title", { required: true })}
                 />
                 <Input
                     label="Slug :"
-                    placeholder="Slug"
+                    placeHolder="Slug"
                     className="mb-4"
                     {...register("slug", { required: true })}
                     onInput={(e) => {

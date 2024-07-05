@@ -53,7 +53,7 @@ const Header = () => {
                 </li> : null
             )}
           </ul>
-          {!authStatus && (
+          {authStatus && (
             <li>
               <LogoutBtn />
             </li>
